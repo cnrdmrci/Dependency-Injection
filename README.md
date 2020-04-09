@@ -61,11 +61,11 @@ Dependency inversiyon prensibinin kuralı;
 
 Durumu şöyle örneklendirebiliriz; 
 <pre>
-'Bilgisayar' adında üst sınıfımız olsun.
-'Klavye' ve 'Mouse' adında alt sınıflarımız olsun.
-Eğer kurduğumuz yapıda Bilgisayara klavye ve mouse bağımlı olarak eklenirse, mouse veya klavye değiştiğinde Bilgisayar sınıfında da değişiklik yapmamız gerekecek.
-Ancak araya ara katman olarak 'BilgisayarParca' adında yeni bir interface yada abstract yapı eklenirse bağımlılık giderilecektir.
-Artık klavye ya da mouse değiştiğinde bu parçalar bilgisayara bağımlı olacaktır.
+'Bilgisayar' adında üst sınıfımız olsun ve 'Klavye' ve 'Mouse' adında da alt sınıflarımız olsun.
+Eğer kurduğumuz yapıda Bilgisayara klavye ve mouse bağımlı olarak eklenirse, 
+Mouse veya Klavye değiştiğinde Bilgisayar sınıfında da değişiklik yapmamız gerekecek.
+Ancak araya ara katman olarak 'IBilgisayarParca' adında yeni bir interface yada abstract yapı eklenirse,
+bağımlılık giderilecektir. Artık Klavye ya da Mouse değiştiğinde bu parçalar bilgisayara bağımlı olacaktır.
 </pre>
 
 ### Dependency Inversion vs Dependency Injection
