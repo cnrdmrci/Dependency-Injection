@@ -86,8 +86,13 @@ Autofac, bir ioc container olarak kullanılan bağımlılıkların tek bir yerde
 
 ```csharp
 var builder = new ContainerBuilder(); // autofac konfigurasyon nesnesi tanımladık.
+
 builder.RegisterType<Kahve>().As<IIcecek>();	// IIcecek istendiğinde Kahve verilmesini tembihledik.
+
 IContainer container = builder.Build();	//autofac mappinglerin yapıldığı container nesnemizi hazırladık.
-var icecekMakinesi = new IcecekMakinesi(container.Resolve<IIcecek>());	//IcecekMakinesine IIcecek için hazırladığımız nesneyi vermesini söyledik.
+
+//IcecekMakinesine IIcecek için hazırladığımız nesneyi vermesini söyledik.
+var icecekMakinesi = new IcecekMakinesi(container.Resolve<IIcecek>());	
+
 icecekMakinesi.Olustur();	//Oluşan nesneyi çalıştırdık.
 ```
